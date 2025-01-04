@@ -1,0 +1,217 @@
+body{
+    /* background-image: url(./assets/PaperBack.jpg); */
+    background-color: var(--background-dark);
+    background-position: center;
+    background-size: 1300px 2000px;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --box: rgba(85, 10, 6, 0.406);
+    --shadow: 5px 10px 50px #2C2C2C;
+    --font_color2:#2C2C2C;
+    --font_color:#FBFBFB;
+    --primary-blue: #1e3a5f9b;
+    --gold-accent: #F4B400;
+    --gryffindor-red: #242222;
+    --slytherin-green: #175E54;
+    --ravenclaw-blue: #2C5D9E;
+    --hufflepuff-amber: #D4A017;
+    --background-dark: #052044;
+    --text-light: #FDFDFD;
+    --hover-glow: #F7DC6F;
+    --secondary-beige: #F5E6C5;
+    --drop:#d0ab5c98;
+
+}
+
+.logo{ 
+    grid-area: logo;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.header-text{
+    grid-area: header;
+    color:-var(--font_color);
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+    color:var(--font_color);
+    letter-spacing: 2px;
+    position: inherit;
+}
+
+/* Styling the nav bar and its element */
+
+.navi-c{
+    grid-area: nav-c;
+    display: flex;
+    gap:40px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font_color);
+    padding-left: 100px;
+    padding-right: 12px;
+    font-optical-sizing: auto;
+    font-size: larger;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    color: var(--font_color);   
+
+}
+
+.navi-c a{
+    text-decoration:none;
+    color:var(--font_color);
+
+}
+
+.nav-c{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* Pseudo Class selector */
+.nav-c a:hover{
+    color: var(--hover-glow);
+    cursor: pointer;
+}  
+
+.drop{
+    cursor: pointer;
+}
+
+.drop:hover .dropDown {
+    color: var(--hover-glow);
+    cursor: pointer;
+    display: block;
+}
+
+/* Styling the drop down menu */
+.dropDown{
+    display: none;
+    position: absolute;
+    background-color: var(--drop);
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    padding: 10px 15px;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--font_color2);
+}
+
+.dropDown li{
+    list-style-type: none;
+}
+
+/* Styling the Hero section and its element */
+
+.hero{
+    grid-area: hero;
+}
+
+.house-cards{
+    grid-area: house-cards;
+    text-align: center;
+}
+
+.community{
+    grid-area: community;
+}
+
+.grid-container{
+    display: grid;
+    height:100vh;
+    grid-template-columns: 100px 1fr 1fr 300px;
+    grid-template-rows: 80px 50px 1fr 1fr 1fr 80px;
+    grid-gap:12px;
+
+    grid-template-areas: 
+    "logo header header header"
+    "nav-c nav-c nav-c nav-c"
+    "hero hero hero hero"
+    "house-cards house-cards house-cards house-cards"
+    "community community community community"
+    "footer footer footer footer"
+    ;
+
+}
+
+.hero-section{
+    background:url(./assets/patronous.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--primary-blue);
+}
+
+.hero-text{
+    background-color: var(--primary-blue) ;
+    width: 800px;
+    text-align: center;
+    border-radius: 5%;
+    padding: 20px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--font_color);
+    box-shadow: var(--shadow);
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+}
+
+.logo-image{
+    width: 130px;
+    height:80px;
+    /* border-radius: 40px; */
+}
+
+h2{
+    color:var(--font_color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+h1{
+    color:var(--font_color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.quiz{
+    padding: 20px;
+    width: 500px;
+    background-color: var(--primary-blue) ;
+    text-align: center;
+    padding: 20px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--font_color);
+    box-shadow: var(--shadow);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.quiz a{
+    color:var(--font_color);
+}

@@ -1,0 +1,241 @@
+body{
+    background-image: url(./assets/PaperBack.jpg);
+    background-color: rgb(37, 3, 3);
+    background-position: center;
+    background-size: 1300px 2000px;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --box: rgba(85, 10, 6, 0.406);
+    --shadow: 5px 10px 50px #2C2C2C;
+    --font_color:#2C2C2C;
+    --font_color2:#FBFBFB;
+    --primary-blue: #1E3A5F;
+    --gold-accent: #F4B400;
+    --background-dark: #0C0C0C;
+    --text-light: #FDFDFD;
+    --hover-glow: #F7DC6F;
+    --secondary-beige: #f5e6c586;
+    --drop:#d0ab5c98;
+
+}
+
+.logo-image{
+    width: 130px;
+    height:80px;
+    /* border-radius: 40px; */
+}
+
+
+.logo{ 
+    grid-area: logo;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+.header-text{
+    grid-area: header;
+    color:-var(--font_color);
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+    color:var(--font_color);
+    letter-spacing: 2px;
+    position: inherit;
+}
+
+/* Styling the nav bar and its element */
+
+.navi-c{
+    grid-area: nav-c;
+    display: flex;
+    gap:40px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font_color);
+    padding-left: 100px;
+    padding-right: 12px;
+    font-optical-sizing: auto;
+    font-size: larger;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    color: var(--font_color);   
+    font-weight: 400;
+
+}
+
+.navi-c a{
+    text-decoration:none;
+    color:var(--font_color);
+
+}
+
+.nav-c{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* Pseudo Class selector */
+.nav-c a:hover{
+    color: var(--hover-glow);
+    cursor: pointer;
+}  
+
+.drop{
+    cursor: pointer;
+}
+
+.drop:hover .dropDown {
+    color: var(--hover-glow);
+    cursor: pointer;
+    display: block;
+}
+
+/* Styling the drop down menu */
+.dropDown{
+    display: none;
+    position: absolute;
+    background-color: var(--drop);
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    padding: 10px 15px;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--font_color2);
+}
+
+.dropDown li{
+    list-style-type: none;
+}
+.faculty-cards{
+    grid-area: cards;
+    text-align: center;
+}
+
+.faculty-cards2{
+    grid-area: cards2;
+    text-align: center;
+}
+
+
+.grid-container{
+    display: grid;
+    height:100vh;
+    grid-template-columns: 100px 1fr 350px;
+    grid-template-rows: 80px 50px 1fr 1fr 80px;
+    grid-gap:12px;
+
+    grid-template-areas: 
+    "logo header header header"
+    "nav-c nav-c nav-c nav-c"
+    "cards cards cards cards"
+    "cards2 cards2 cards2 cards2"
+    "footer footer footer footer"
+    ;
+}
+
+h2{
+    color:var(--font_color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.image-card{
+    height: 150px;
+    width:100px;
+    border-radius: 10px;
+}
+
+.faculty{
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px 0px 20px 50px;
+    gap: 80px;   
+    
+}
+
+.faculty2{
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px 0px 20px 50px;
+    gap: 80px;   
+    
+}
+
+
+.house-image{
+    height: 320px;
+    width:250px;
+    border-radius: 20px;
+
+}
+
+.card-body{
+    padding: 0 12px 12px 12px;
+    width:200px;
+    height:300px;
+    color: var(--font_color);
+    text-align: center;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.read-more-button{
+    background-color: var(--secondary-beige);
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 30px;
+    float: right;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: var(--font_color);
+
+}
+
+.read-more-button a{
+    text-decoration: none;
+    color: var(--font_color);
+}
+
+.read-more-button:hover{
+    background-color: var(--hover-glow);
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.card-element{
+    width:150px;
+    border-radius:20px;
+    width: 250px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: var(--secondary-beige);
+    text-align: center;
+    color: var(--font_color);
+}

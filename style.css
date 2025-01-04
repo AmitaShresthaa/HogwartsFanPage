@@ -1,0 +1,363 @@
+body{
+    background-image: url(./assets/PaperBack.jpg);
+    background-color: rgb(37, 3, 3);
+    background-position: center;
+    background-size: 1300px 2000px;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --box: rgba(85, 10, 6, 0.406);
+    --shadow: 5px 10px 50px #2C2C2C;
+    --font_color:#2C2C2C;
+    --font_color2:#FBFBFB;
+    --primary-blue: #1E3A5F;
+    --gold-accent: #F4B400;
+    --gryffindor-red: #9B1C31;
+    --slytherin-green: #175E54;
+    --ravenclaw-blue: #2C5D9E;
+    --hufflepuff-amber: #D4A017;
+    --background-dark: #0C0C0C;
+    --text-light: #FDFDFD;
+    --hover-glow: #F7DC6F;
+    --secondary-beige: #F5E6C5;
+    --drop:#d0ab5c98;
+
+}
+
+.logo{ 
+    grid-area: logo;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.header-text{
+    grid-area: header;
+    color:-var(--font_color);
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+    color:var(--font_color);
+    letter-spacing: 2px;
+    position: inherit;
+}
+
+/* Styling the nav bar and its element */
+
+.navi-c{
+    grid-area: nav-c;
+    display: flex;
+    gap:40px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font_color);
+    padding-left: 100px;
+    padding-right: 12px;
+    font-optical-sizing: auto;
+    font-size: larger;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    color: var(--font_color);   
+
+}
+
+.navi-c a{
+    text-decoration:none;
+    color:var(--font_color);
+
+}
+
+.nav-c{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* Pseudo Class selector */
+.nav-c a:hover{
+    color: var(--hover-glow);
+    cursor: pointer;
+}  
+
+.drop{
+    cursor: pointer;
+}
+
+.drop:hover .dropDown {
+    color: var(--hover-glow);
+    cursor: pointer;
+    display: block;
+}
+
+/* Styling the drop down menu */
+.dropDown{
+    display: none;
+    position: absolute;
+    background-color: var(--drop);
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    padding: 10px 15px;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--font_color2);
+}
+
+.dropDown li{
+    list-style-type: none;
+}
+
+/* Styling the Hero section and its element */
+
+.hero{
+    grid-area: hero;
+}
+
+.house-cards{
+    grid-area: house-cards;
+    text-align: center;
+}
+
+.community{
+    grid-area: community;
+}
+
+.grid-container{
+    display: grid;
+    height:100vh;
+    grid-template-columns: 100px 1fr 1fr 300px;
+    grid-template-rows: 80px 50px 1fr 1fr 1fr 80px;
+    grid-gap:12px;
+
+    grid-template-areas: 
+    "logo header header header"
+    "nav-c nav-c nav-c nav-c"
+    "hero hero hero hero"
+    "house-cards house-cards house-cards house-cards"
+    "community community community community"
+    "footer footer footer footer"
+    ;
+
+}
+
+.hero-section{
+    background:url(./assets/hero.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.hero-text{
+    background-color: var(--drop) ;
+    width: 300px;
+    text-align: center;
+    border-radius: 15%;
+    padding: 32px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--font_color2);
+    box-shadow: var(--shadow);    
+}
+
+.logo-image{
+    width: 130px;
+    height:80px;
+    /* border-radius: 40px; */
+}
+
+h2{
+    color:var(--font_color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.image-card{
+    height: 150px;
+    width:100px;
+    border-radius: 10px;
+}
+
+.houses{
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px;
+    gap: 20px;   
+}
+.house-image{
+    height: 320px;
+    width:250px;
+    border-radius: 20px;
+
+}
+
+.house-card-body{
+    padding: 0 12px 12px 12px;
+    width:200px;
+    height:300px;
+    color: var(--font_color2);
+    text-align: center;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.read-more-button{
+    background-color: var(--secondary-beige);
+    padding: 15px;
+    border-radius: 30px;
+    float: right;
+    border: none;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.read-more-button:hover{
+    background-color: var(--hover-glow);
+    cursor: pointer;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.ravenclaw{
+    width:150px;
+    color:aliceblue;
+    border-radius:20px;
+    width: 250px;
+    background-color: var(--ravenclaw-blue);
+    box-shadow: var(--shadow);
+
+}
+
+.huffelpuff{
+    width:150px;
+    color:aliceblue;
+    border-radius:20px;
+    width: 250px;
+    background-color: var(--hufflepuff-amber);
+    box-shadow: var(--shadow);
+
+
+}
+
+.slytherin{
+    width:150px;
+    color:aliceblue;
+    border-radius:20px;
+    width: 250px;
+    background-color: var(--slytherin-green);
+    box-shadow: var(--shadow);
+
+
+}
+
+.griffendor{
+    width:150px;
+    color:aliceblue;
+    border-radius:20px;
+    width: 250px;
+    background-color: var(--gryffindor-red);
+    box-shadow: var(--shadow);
+
+
+}
+
+.news-card{
+    padding: 20px;
+    gap:12px;
+    border-radius: 20px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+    display:flex;
+    margin:20px;
+    font-family: "Parisienne", serif;
+    font-weight: 500;
+    font-size: large;
+    color: var(--font_color);
+
+}
+
+.news-card1{
+    padding: 20px;
+    gap:12px;
+    border-radius: 20px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+    display:flex;
+    margin:20px;
+    font-family: "Parisienne", serif;
+    font-weight: 500;
+    font-size: large;
+    color: var(--font_color);
+   
+}
+
+.news-card2{
+    padding: 20px;
+    gap:12px;
+    border-radius: 20px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+    display:flex;
+    margin:20px;
+    font-family: "Parisienne", serif;
+    font-weight: 500;
+    font-size: large;
+    color: var(--font_color);
+   
+}
+
+.news-card3{
+    padding: 20px;
+    gap:12px;
+    border-radius: 20px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+    display:flex;
+    margin:20px;
+    font-family: "Parisienne", serif;
+    font-weight: 500;
+    font-size: large;
+    color: var(--font_color);
+ 
+}
+
+.news-card4{
+    padding: 20px;
+    gap:12px;
+    border-radius: 20px;
+    background-color: var(--secondary-beige);
+    box-shadow: var(--shadow);
+    display:flex;
+    margin:20px;
+    font-family: "Parisienne", serif;
+    font-weight: 500;
+    font-size: large;
+    color: var(--font_color);
+   
+}
+
+.footer{
+    grid-area: footer;
+    background-color: var(--secondary-beige);
+    text-align: center;
+    color: var(--font_color);
+}
