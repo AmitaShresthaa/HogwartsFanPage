@@ -215,3 +215,11 @@ h1{
 .quiz a{
     color:var(--font_color2);
 }
+
+.footer{
+    grid-area: footer;
+    background-color: var(--drop);
+    text-align: center;
+    color: var(--font_color);
+    height: 20vh;
+}

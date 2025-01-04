@@ -357,7 +357,8 @@ h2{
 
 .footer{
     grid-area: footer;
-    background-color: var(--secondary-beige);
+    background-color: var(--drop);
     text-align: center;
     color: var(--font_color);
+    height: 20vh;
 }
